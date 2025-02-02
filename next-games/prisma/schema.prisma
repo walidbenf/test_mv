@@ -8,8 +8,14 @@ generator client {
 }
 
 model Game {
-  id        Int      @id @default(autoincrement())
-  name      String
-  slug      String   @unique
-  createdAt DateTime @default(now())
+  id          Int       @id @default(autoincrement())
+  name        String
+  slug        String    @unique
+  summary     String?
+  coverUrl    String?
+  rating      Float?
+  releaseDate DateTime?
+  genres      Json?
+  screenshots Json?
+  createdAt   DateTime  @default(now())
 }
