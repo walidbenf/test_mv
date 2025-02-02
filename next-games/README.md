@@ -1,3 +1,27 @@
+## Projet pour une entreprise:
+### On crée déjà notre projet Next.js
+```sh
+npx create-next-app@latest next-games --typescript
+cd next-games
+```
+### On installe PostgreSQL:
+```sh
+sudo apt update && sudo apt install postgresql postgresql-contrib
+```
+### On crée notre base de donnée PostgreSQL
+```sh
+sudo -u postgres psql
+CREATE DATABASE mon_projet;
+```
+### On installe Prisma
+```sh
+npm install prisma @prisma/client
+npx prisma init
+```
+### Puis on le configure avec notre connexion PostgreSQL et on migre
+```sh
+npx prisma migrate dev
+```
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
