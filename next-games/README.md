@@ -4,11 +4,15 @@
 npx create-next-app@latest next-games --typescript
 cd next-games
 ```
-### On crée notre base de donnée PostgreSQL:
+### On installe PostgreSQL:
 ```
 sudo apt update && sudo apt install postgresql postgresql-contrib
 ```
-
+### On crée notre base de donnée PostgreSQL
+```
+sudo -u postgres psql
+CREATE DATABASE mon_projet;
+```
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
