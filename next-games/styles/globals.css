@@ -3,19 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+	--background: #0F0F11;
+	--foreground: #F2ECD9;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  @media (prefers-color-scheme: dark) {
+	:root {
+	  --background: #0F0F11;
+	  --foreground: #F2ECD9;
+	}
+  }
+  
+  body {
+	color: var(--foreground);
+	background: var(--background);
+  }
+  
+  /* Searchbar styles */
+  input[type="text"] {
+	background: #19191A;
+	color: #EC954D;
+	border: 1px solid #EC954D/20;
+  }
+  
+  input[type="text"]::placeholder {
+	color: #EC954D/60;
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: #0F0F11;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: #EC954D;
+	border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: #EC954D/80;
+  }

@@ -1,30 +1,25 @@
-## Projet pour une entreprise:
-### On crée déjà notre projet Next.js
-```sh
-npx create-next-app@latest next-games --typescript
-cd next-games
-```
-### On installe PostgreSQL:
-```sh
-sudo apt update && sudo apt install postgresql postgresql-contrib
-```
-### On crée notre base de donnée PostgreSQL
-```sh
-sudo -u postgres psql
-CREATE DATABASE mon_projet;
-```
-### On installe Prisma
-```sh
-npm install prisma @prisma/client
-npx prisma init
-```
-### Puis on le configure avec notre connexion PostgreSQL et on migre
-```sh
-npx prisma migrate dev
-```
-### Run le projet
-```bash
-npm run dev
-```
+# Game Search Platform
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A video game search platform built with Next.js, TypeScript, and PostgreSQL, using the IGDB API.
+
+## Technologies
+
+- Next.js 14
+- TypeScript
+- PostgreSQL
+- Prisma ORM
+- IGDB API
+- Tailwind CSS
+
+## Prerequisites
+
+- Node.js 18+
+- PostgreSQL
+- IGDB API credentials
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/walidbenf/test_mv.git
+cd next-games
