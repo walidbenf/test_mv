@@ -1,6 +1,6 @@
 ## Projet pour une entreprise:
 ### On crée déjà notre projet Next.js
-```sh
+```
 npx create-next-app@latest next-games --typescript
 cd next-games
 ```
