@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { PrismaClient } from '@prisma/client'
 import { igdbClient } from '../igdb'
-import type { IGDBGame } from '../types/game'
+import type { IGDBGame } from '../../types/game'
 
 const prisma = new PrismaClient()
 
