@@ -13,6 +13,11 @@ sudo apt update && sudo apt install postgresql postgresql-contrib
 sudo -u postgres psql
 CREATE DATABASE mon_projet;
 ```
+### On installe Prisma
+```
+npm install prisma @prisma/client
+npx prisma init
+```
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
