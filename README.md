@@ -5,6 +5,7 @@ A video game search platform built with Next.js, TypeScript, and PostgreSQL, usi
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Features](#features)
+- [Presentation](#project-presentation)
 ## Technologies
 
 - Next.js 14
