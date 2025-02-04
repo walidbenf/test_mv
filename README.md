@@ -82,3 +82,16 @@ npm run dev
   - Release dates
 - Responsive design
 - Data persistence in PostgreSQL
+
+### Project presentation
+First of all we open the site and we see a navbar which contains genres and a search box
+![image](https://github.com/user-attachments/assets/026e7e5f-69fc-451d-9bce-9c7805194686)
+
+When you search for a game or games it loads them into the database
+![image](https://github.com/user-attachments/assets/11180b6f-9b2e-43fe-9605-83a2e8a25334)
+
+After that the games loaded in the database are displayed in the home page
+![image](https://github.com/user-attachments/assets/94bf737a-e2e4-48db-9810-19952cb64990)
+
+And finally we can use the navbar to sort the games in the database by genre
+![image](https://github.com/user-attachments/assets/3c918e9d-2dca-45db-afa2-c83b3c2097f6)
