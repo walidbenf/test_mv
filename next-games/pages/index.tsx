@@ -14,20 +14,35 @@ export default function Home() {
   useEffect(() => {
     searchGames('')
   }, [])
-
+  
   const searchGames = async (query: string) => {
-    setIsLoading(true)
-    try {
-      const res = await fetch(`/api/games?query=${query}`)
-      const data = await res.json()
-      if (Array.isArray(data)) {
-        setGames(data)
-        setFilteredGames(data)
-      }
-    } catch (error) {
-      console.error(error)
-    }
-    setIsLoading(false)
+	setIsLoading(true)
+	try {
+	  // Keep existing games that match the query
+	  const matchingExistingGames = games.filter(game => 
+		game.name.toLowerCase().includes(query.toLowerCase())
+	  )
+  
+	  // Fetch new games from API
+	  const res = await fetch(`/api/games?query=${query}`)
+	  const newGames = await res.json()
+  
+	  if (Array.isArray(newGames)) {
+		// Combine matching existing games with new games, avoiding duplicates
+		const allGames = [...matchingExistingGames]
+		newGames.forEach(newGame => {
+		  const exists = allGames.some(game => game.id === newGame.id)
+		  if (!exists) {
+			allGames.push(newGame)
+		  }
+		})
+		setGames(allGames)
+		setFilteredGames(allGames)
+	  }
+	} catch (error) {
+	  console.error(error)
+	}
+	setIsLoading(false)
   }
 
   const handleGenreSelect = (genre: string | null) => {
